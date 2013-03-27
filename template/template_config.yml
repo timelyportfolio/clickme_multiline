@@ -1,0 +1,25 @@
+info: |
+  Recreate with clickme gniemetz multiline with brushing and mouseover
+
+valid_names:
+
+name_comments: |
+
+
+scripts:
+  - http://d3js.org/d3.v3.min.js
+
+styles:
+  - original_style.css
+
+default_parameters: {
+  width: 800,
+  height: 800,
+}
+
+require_packages:
+  - df2json
+
+require_server: no
+
+original_url: http://bl.ocks.org/timelyportfolio/5149102

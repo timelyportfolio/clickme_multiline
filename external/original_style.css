@@ -1,0 +1,28 @@
+            body {
+              font: 10px sans-serif;
+            }
+
+            .axis path,
+            .axis line {
+              fill: none;
+              stroke: #000;
+              shape-rendering: crispEdges;
+            }
+
+            .x.axis path {
+              display: none;
+            }
+
+            .line {
+              fill: none;
+              stroke-width: 5px;
+            }
+        
+           /*ugly way before I found Mike Bostock's example
+             .points {opacity: 0;}
+            .points:hover {opacity: 1;}*/
+
+        .overlay {
+            fill: none;
+            pointer-events: all;
+        }
