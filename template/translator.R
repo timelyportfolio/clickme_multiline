@@ -3,14 +3,18 @@
 #' @param data input data object
 #' @param opts options of current template
 #' @return The opts variable with the opts$data variable filled in
-translate <- function(data, opts = NULL) {
+translate <- function(opts) {
   require(df2json)
+  require(reshape2)
   
   #I would like to generalize this to handle both price and return
   #right now just handles return
   #clickme template.Rmd javascript can handle prices or cumulative
   #so we will send cumulative which can serve as price
   
+
+  data <- opts$data
+
   #remove na
   data[is.na(data)] <- 0
   #get cumulative growth
@@ -25,6 +29,7 @@ translate <- function(data, opts = NULL) {
   #remove periods from indexnames to prevent javascript confusion
   #these . usually come from spaces in the colnames when melted
   data.melt[,"indexname"] <- apply(matrix(data.melt[,"indexname"]),2,gsub,pattern="[.]",replacement="")
-  opts$data <- df2json(data.melt)
-  opts
+  
+  data <- df2json(data.melt)
+  return(data)
 }

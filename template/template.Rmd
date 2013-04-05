@@ -46,7 +46,7 @@
 
           var color = d3.scale.category20();
 
-          data = {{opts$data}}
+          data = {{ translate(opts) }}
               data.forEach(function (d) {
                   d.date = parseDate(d.date);
                   d.price = +d.price;
