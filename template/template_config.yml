@@ -1,16 +1,18 @@
 info: |
   Recreate with clickme gniemetz multiline with brushing and mouseover
 
-valid_names:
-
-name_comments: |
-
-
 scripts:
   - http://d3js.org/d3.v3.min.js
 
 styles:
   - original_style.css
+
+data_names:
+  required:
+    - "date"
+    - "indexname"
+    - "price"
+  optional:
 
 default_parameters: {
   width: 800,

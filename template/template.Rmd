@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    {{ append_scripts(opts) }}
-    {{ append_styles(opts) }}
+    {{ get_external(opts) }}
 </head>  
 
 <body>
