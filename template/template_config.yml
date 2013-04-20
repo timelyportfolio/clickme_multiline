@@ -9,15 +9,11 @@ styles:
 
 data_names:
   required:
-    - "date"
-    - "indexname"
-    - "price"
   optional:
 
-default_parameters: {
-  width: 800,
-  height: 800,
-}
+params:
+  width: 800
+  height: 800
 
 require_packages:
   - df2json
